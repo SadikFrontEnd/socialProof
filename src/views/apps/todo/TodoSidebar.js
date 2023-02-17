@@ -98,15 +98,6 @@ class TodoSidebar extends React.Component {
                 <User size={22} />
                 <span className="align-middle ml-1">Help Center</span>
               </ListGroupItem>
-              <ListGroupItem
-                className="border-0"
-                onClick={() => {
-                  history.push("/todo/positiontable");
-                }}
-              >
-                <User size={22} />
-                <span className="align-middle ml-1">Position</span>
-              </ListGroupItem>
             </ListGroup>
             <hr />
           </PerfectScrollbar>
