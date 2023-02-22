@@ -1,7 +1,8 @@
 // new css
 div.heading{
-  background: #4270fc;
-    background: linear-gradient(90deg,#4270fc,#1e43ff);
+  // background: #4270fc;
+    // background: linear-gradient(90deg,#4270fc,#1e43ff);
+    background-color: #7367f0!important;
     padding: 3.125rem !important;
 }
 .heading1 ,.heading h1{
@@ -11,6 +12,7 @@ div.heading{
     line-height: 1em;
     margin: 0 0 15px;
     letter-spacing: -.02em;
+  text-align: start;
     
 }
 .heading1{
@@ -26,7 +28,8 @@ div.heading{
   color: hsla(0,0%,100%,.75) !important;
   margin: 0;
   max-width: 610px;
-  letter-spacing: -.01em
+  letter-spacing: -.01em;
+  text-align: start;
 }
 
 .customselect .select__control .css-yk16xz-control{
@@ -84,8 +87,9 @@ div.heading{
   // rs css
 
   [dir=ltr] div.heading {
-    background: linear-gradient(90deg, #4270fc, #1e43ff);
-    padding: 70px 20px !important;
+    // background: linear-gradient(90deg, #4270fc, #1e43ff);
+    background-color: #7367f0!important;
+    padding: 70px 35px 90px!important;
     display: inline-block;
     width: 100%;
 }
@@ -105,6 +109,11 @@ border-bottom: 1px solid #eceff0 !important;
     background-color: #eff8ff !important;
     padding: 1.2rem !important;
 }
+.inputTime{
+  padding-left: 2px;
+  width: 2rem;
+  text-align: center;
+}
 
 
 // TodoList
@@ -116,4 +125,20 @@ border-bottom: 1px solid #eceff0 !important;
  font-size: 0.9rem !important;
  border-radius: 0.358rem !important;
 
+}
+// notification css
+.onofButton{
+  margin-right: 10px;
+  font-size: .8em;
+  font-weight: 700;
+  color: #a7b5c2;
+  text-transform: uppercase;
+  opacity: .5;
+}
+.innerAppearance{
+  display: flex;
+  justify-content: space-between;
+}
+.css-1hwfws3{
+  width: 50px;
 }

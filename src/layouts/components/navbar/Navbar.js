@@ -12,7 +12,7 @@ import NavbarUser from "./NavbarUser";
 import userImg from "../../../assets/img/portrait/small/avatar-s-11.jpg";
 
 const UserName = (props) => {
-  console.log(props);
+  // console.log(props);
   let username = "";
   if (props.userdata !== undefined) {
     username = props.userdata.name;

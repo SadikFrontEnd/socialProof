@@ -14,8 +14,8 @@ import {
   ModalBody,
 } from "reactstrap";
 import InputMask from "react-input-mask";
-import "../../../../assets/scss/pages/edit-campaign.scss";
 import Select from "react-select";
+import "../../../../assets/scss/pages/edit-campaign.scss";
 const category = [
   { value: "Lead", label: "Lead" },
   { value: "Purchase", label: "Purchase" },
@@ -182,7 +182,7 @@ class CreateGoal extends React.Component {
                       <li>abc1</li>
                       <li>abc2</li>
                       <li>abc3</li>
-                      <li>abc3 dcssfsfffsgfsg</li>
+                      <li>abc3 </li>
                     </ul>
                   </div>
                 </Col>
@@ -197,7 +197,7 @@ class CreateGoal extends React.Component {
                       <li>abc2</li>
                       <li>abc3</li>
                       <li>
-                        <span>abc3 dcssfsfffsgfsg</span>
+                        <span>abc3</span>
                       </li>
                     </ul>
                   </div>

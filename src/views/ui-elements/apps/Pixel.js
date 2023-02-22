@@ -52,7 +52,7 @@ class Pixel extends React.Component {
       <>
         <div className="heading">
           <h1>Install My Pixel </h1>
-          <p className="para">
+          <p className="">
             Follow the instructions below or ask a colleague to help.
           </p>
         </div>
@@ -73,8 +73,14 @@ class Pixel extends React.Component {
                 </p>
               </div>
               <Row>
-                <Col md="2" sm="12" className="pr-md-0 mb-1">
+                <Col lg="12" md="12" sm="12" className="pr-md-0 mb-3">
                   <Input value={this.state.value} onChange={this.handleCopy} />
+                  {/* <div onClick={this.handleCopy}>
+                    <script
+                      src="https://cdn.useproof.com/proof.js?acc=yPWG92xBwcUD9hFOjkbxYa2N29n1"
+                      async
+                    ></script>
+                  </div> */}
                 </Col>
                 <Col md="2" sm="12" className="mb-1">
                   <CopyToClipboard onCopy={this.onCopy} text={this.state.value}>

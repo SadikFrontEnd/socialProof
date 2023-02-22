@@ -12,15 +12,19 @@ import {
   CardHeader,
   CardTitle,
   Input,
+  CustomInput,
 } from "reactstrap";
-import { MoreHorizontal, ChevronDown } from "react-feather";
+import Select from "react-select";
 import "../../../../assets/scss/pages/campaign.scss";
 import count from "../../../../assets/img/svg/CountPulse.svg";
 import card from "../../../../assets/img/svg/card.svg";
 import fire from "../../../../assets/img/svg/fire.svg";
 import groupImg from "../../../../assets/img/svg/bulkpng.png";
-// import "../../../../assets/scss/pages/campaign.scss";
-import "../../../../assets/scss/pages/campaign.scss";
+
+const category = [
+  { value: "Rounded", label: "Rounded" },
+  { value: "Boxy", label: "Boxy" },
+];
 class Notification extends React.Component {
   render() {
     return (
@@ -76,13 +80,64 @@ class Notification extends React.Component {
             <Card className="cardChange hi-1">
               <CardHeader className="notifiCard">
                 <CardTitle className="r">Appearance</CardTitle>
-                <div></div>
               </CardHeader>
               <CardBody className="">
-                <ul>
-                  <li>Hide notifications on mobile</li>
-                  <span> </span>
-                </ul>
+                <div className="innerAppearance">
+                  <div>Hide notifications on mobile</div>
+                  <div className="d-flex">
+                    <div>
+                      <span>OFF</span>
+                    </div>
+                    <CustomInput
+                      className="custom-switch-success mr-1 ml-2 mb-2"
+                      type="switch"
+                      id="success"
+                      name="success"
+                      inline
+                    ></CustomInput>
+                  </div>
+                </div>
+
+                <div className="innerAppearance">
+                  <div>Show on top of page on mobile</div>
+                  <div className="d-flex">
+                    <div>
+                      <span>OFF</span>
+                    </div>
+                    <CustomInput
+                      className="custom-switch-success mr-1 ml-2 mb-2"
+                      type="switch"
+                      id="success"
+                      name="success"
+                      inline
+                    ></CustomInput>
+                  </div>
+                </div>
+                <div className="innerAppearance">
+                  <div>Position notifications on</div>
+                  <div className="d-flex">
+                    <div>
+                      <span>OFF</span>
+                    </div>
+                    <CustomInput
+                      className="custom-switch-success mr-1 ml-2 mb-2"
+                      type="switch"
+                      id="success"
+                      name="success"
+                      inline
+                    ></CustomInput>
+                  </div>
+                </div>
+                <div className="innerAppearance">
+                  <div>Notification Theme</div>
+                  <div className="d-flex">
+                    <Select
+                      className="React customselect"
+                      name="category"
+                      options={category}
+                    />
+                  </div>
+                </div>
               </CardBody>
             </Card>
           </Col>
@@ -99,7 +154,7 @@ class Notification extends React.Component {
                       <Input
                         type="number"
                         placeholder="0"
-                        style={{ paddingLeft: "2px", width: "3rem" }}
+                        className="inputTime"
                       />
                     </span>
                   </div>
@@ -112,20 +167,20 @@ class Notification extends React.Component {
                       <Input
                         type="number"
                         placeholder="7"
-                        style={{ paddingLeft: "2px", width: "3rem" }}
+                        className="inputTime"
                       />
                     </span>
                   </div>
                   <span className="ml-1"> seconds</span>
                 </div>
                 <div className="d-flex my-1">
-                  <div className="mr-1">Space each notification</div>
+                  <div className="mr-1">Position notifications on</div>
                   <div>
                     <span className="">
                       <Input
                         type="number"
                         placeholder="3"
-                        style={{ paddingLeft: "2px", width: "3rem" }}
+                        className="inputTime"
                       />
                     </span>
                   </div>

@@ -99,3 +99,34 @@ padding:9px 12px !important;
 .iconSize{
     margin-right: 8px !important;
 }
+
+#test-l-1, #test-l-2 ,#test-l-3 ,#test-l-4,#test-l-5{
+    margin-left: 0px;
+}
+
+// stepper
+.step-trigger{
+    padding: 8px !important;
+}
+
+[dir] .bs-stepper-content {
+    padding: 0 20px 20px;
+    margin-top: 50px;
+}
+[dir] .bs-stepper-circle {
+    padding: 0.5em 0;
+    margin: 0.25rem;
+    background-color: #6c757d;
+    border-radius: 2px;
+  }
+  [dir] .active .bs-stepper-circle   {
+    background-color: #7367f0  !important;
+    // color:#7367f0;
+}
+  [dir] .active .bs-stepper-circle .bs-stepper-label  {
+    background-color: #7367f0  !important;
+}
+.bs-stepper .step-trigger:focus {
+    color: #7367f0 !important;
+    outline: 0;
+}
