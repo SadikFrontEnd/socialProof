@@ -84,14 +84,14 @@ class Notification extends React.Component {
               <CardBody className="">
                 <div className="innerAppearance">
                   <div>Hide notifications on mobile</div>
-                  <div className="d-flex">
+                  <div className="d-flex switches">
                     <div>
                       <span>OFF</span>
                     </div>
                     <CustomInput
                       className="custom-switch-success mr-1 ml-2 mb-2"
                       type="switch"
-                      id="success"
+                      id="1"
                       name="success"
                       inline
                     ></CustomInput>
@@ -107,7 +107,7 @@ class Notification extends React.Component {
                     <CustomInput
                       className="custom-switch-success mr-1 ml-2 mb-2"
                       type="switch"
-                      id="success"
+                      id="2"
                       name="success"
                       inline
                     ></CustomInput>
@@ -122,7 +122,7 @@ class Notification extends React.Component {
                     <CustomInput
                       className="custom-switch-success mr-1 ml-2 mb-2"
                       type="switch"
-                      id="success"
+                      id="3"
                       name="success"
                       inline
                     ></CustomInput>

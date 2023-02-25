@@ -74,10 +74,6 @@ padding: 5px;
     color: #4270fc;
     text-transform: uppercase
 }
-
-
-
-
 // Auto Page
 .autoPara{font-size: 18px;
 color: #9196b6;
@@ -116,17 +112,20 @@ padding:9px 12px !important;
 [dir] .bs-stepper-circle {
     padding: 0.5em 0;
     margin: 0.25rem;
-    background-color: #6c757d;
+    background-color:#b9b9c3;
     border-radius: 2px;
   }
+  
   [dir] .active .bs-stepper-circle   {
     background-color: #7367f0  !important;
-    // color:#7367f0;
+   
 }
-  [dir] .active .bs-stepper-circle .bs-stepper-label  {
-    background-color: #7367f0  !important;
+
+.textpara{
+    color: #b9b9c3;
+    font-weight: 400;
+    font-family: "Montserrat",Helvetica,Arial,serif;
 }
-.bs-stepper .step-trigger:focus {
-    color: #7367f0 !important;
-    outline: 0;
+[dir] .bs-stepper .step-trigger:hover {
+    background-color: transparent;
 }

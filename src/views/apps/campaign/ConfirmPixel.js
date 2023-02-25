@@ -5,12 +5,6 @@ import {
   Row,
   Col,
   Button,
-  DropdownItem,
-  UncontrolledButtonDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  Card,
-  CardBody,
   Modal,
   ModalHeader,
   ModalBody,
@@ -20,18 +14,7 @@ import {
 } from "reactstrap";
 import DataTable from "react-data-table-component";
 import "../../../assets/scss/pages/app-email.scss";
-import Select from "react-select";
-import {
-  Menu,
-  Search,
-  ChevronDown,
-  MoreHorizontal,
-  Check,
-  Info,
-  Star,
-  Trash,
-} from "react-feather";
-import Checkbox from "../../../components/@vuexy/checkbox/CheckboxesVuexy";
+import { Menu, Search, ChevronDown } from "react-feather";
 import PerfectScrollbar from "react-perfect-scrollbar";
 import { connect } from "react-redux";
 import { history } from "../../../history";
@@ -267,9 +250,6 @@ class ConfirmPixel extends React.Component {
                   <Col lg="4" md="4" sm="12" className="ml-2">
                     <div className="d-flex mt-2">
                       <div className="d-flex justify-content-around">
-                        {/* <div>
-                          <span>1 of 1 campaigns</span>
-                        </div> */}
                         <div className="">
                           <Button
                             color="primary"
@@ -282,37 +262,10 @@ class ConfirmPixel extends React.Component {
                               className="modal-dialog-centered"
                             >
                               <Form onSubmit={this.handleSubmit}>
-                                <ModalHeader
-                                  toggle={this.toggleModal}
-                                  // className="bg-primary"
-                                >
+                                <ModalHeader toggle={this.toggleModal}>
                                   Build & launch a new campaign
                                 </ModalHeader>
                                 <ModalBody>
-                                  {/* <Row>
-                                    <Col
-                                      lg="12"
-                                      md="12"
-                                      sm="12"
-                                      className="mb-2"
-                                    >
-                                      <Input
-                                        type="text"
-                                        required
-                                        placeholder="Campaign Name"
-                                        onChange={(e) =>
-                                          this.setState({
-                                            campaignName: e.target.value,
-                                          })
-                                        }
-                                        value={this.state.campaignName}
-                                        id="campaignName"
-                                        name="campaignName"
-                                        valid={this.state.isValid === true}
-                                        invalid={this.state.isValid === false}
-                                      />
-                                    </Col>
-                                  </Row> */}
                                   <InputGroup>
                                     <Input
                                       type="text"
@@ -329,7 +282,6 @@ class ConfirmPixel extends React.Component {
                                       valid={this.state.isValid === true}
                                       invalid={this.state.isValid === false}
                                       alt="text"
-                                      //  placeholder="create position..."
                                     />
                                   </InputGroup>
                                 </ModalBody>
@@ -343,8 +295,6 @@ class ConfirmPixel extends React.Component {
                                   </Button>
                                   <Button
                                     className="btn-secondary btn-sm"
-                                    // color="secondary"
-                                    // size="sm"
                                     onClick={this.toggleModal}
                                   >
                                     Cancel
