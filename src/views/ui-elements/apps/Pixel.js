@@ -113,7 +113,7 @@ class Pixel extends React.Component {
                   <span>Your pixel is not yet sending data</span>
                 </div>
                 <div className="addCode">
-                  <h2>Still no data?</h2>
+                  <h2 className="heading2">Still no data?</h2>
                   <p>
                     Please read the pixel{" "}
                     <a href="#">troubleshooting article.</a>

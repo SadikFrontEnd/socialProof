@@ -5,26 +5,16 @@ import {
   Row,
   Col,
   Button,
-  Progress,
   UncontrolledButtonDropdown,
   DropdownMenu,
   DropdownItem,
   DropdownToggle,
-  CardHeader,
-  CardTitle,
-  TabContent,
-  TabPane,
-  Nav,
-  NavItem,
-  NavLink,
-  Alert,
   Modal,
   ModalHeader,
   ModalBody,
   ModalFooter,
 } from "reactstrap";
-import { MoreHorizontal, ChevronDown } from "react-feather";
-import { modalFade } from "../../../components/reactstrap/modal/ModalSourceCode";
+import { MoreHorizontal } from "react-feather";
 import "../../../assets/scss/pages/campaign.scss";
 import Select from "react-select";
 const showing = [

@@ -1,19 +1,19 @@
-import React from "react"
-import { Row, Col } from "reactstrap"
-import BreadCrumbs from "../../@vuexy/breadCrumbs/BreadCrumb"
-import NavBasic from "./NavBasic"
-import NavBorder from "./NavBorder"
-import NavCenter from "./NavCenter"
-import NavEnd from "./NavEnd"
-import NavVertical from "./NavVertical"
-import NavVerticalBorder from "./NavVerticalBorder"
-import NavSquareBorder from "./NavSquareBorder"
-import NavDivider from "./NavDivider"
-import Prism from "prismjs"
-import "prismjs/components/prism-jsx.min"
+import React from "react";
+import { Row, Col } from "reactstrap";
+import BreadCrumbs from "../../@vuexy/breadCrumbs/BreadCrumb";
+// import NavBasic from "./NavBasic";
+// import NavBorder from "./NavBorder";
+// import NavCenter from "./NavCenter";
+// import NavEnd from "./NavEnd";
+// import NavVertical from "./NavVertical";
+// import NavVerticalBorder from "./NavVerticalBorder";
+// import NavSquareBorder from "./NavSquareBorder";
+// import NavDivider from "./NavDivider";
+import Prism from "prismjs";
+import "prismjs/components/prism-jsx.min";
 class NavComponent extends React.Component {
   componentDidMount() {
-    Prism.highlightAll()
+    Prism.highlightAll();
   }
   render() {
     return (
@@ -23,7 +23,7 @@ class NavComponent extends React.Component {
           breadCrumbParent="Components"
           breadCrumbActive="Navs"
         />
-        <Row>
+        {/* <Row>
           <Col md="6" sm="12">
             <NavBasic />
           </Col>
@@ -48,9 +48,9 @@ class NavComponent extends React.Component {
           <Col md="6" sm="12">
             <NavDivider />
           </Col>
-        </Row>
+        </Row> */}
       </React.Fragment>
-    )
+    );
   }
 }
-export default NavComponent
+export default NavComponent;

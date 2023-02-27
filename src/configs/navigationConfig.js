@@ -4,10 +4,10 @@ const navigationConfig = [
   {
     id: "dashboard",
     title: "Dashboard",
-    type: "collapse",
+    // type: "collapse",
     icon: <Icon.Home size={20} />,
     badge: "warning",
-    badgeText: "2",
+    // badgeText: "2",
     // children: [
     //   {
     //     id: "analyticsDash",
