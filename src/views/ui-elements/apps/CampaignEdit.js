@@ -37,7 +37,11 @@ class CampaignEdit extends Component {
             <div class="step" data-target="#test-l-1">
               <button class="step-trigger">
                 <span class="bs-stepper-circle">1</span>
-                <span class="bs-stepper-label textpara">Confirm Pixel</span>
+                <div className="">
+                  <p className="px">Pixel</p>
+                  <p>Confirm and Install</p>
+                </div>
+                {/* <span class="bs-stepper-label textpara">Confirm Pixel</span> */}
               </button>
               <Icon.ChevronRight
                 size={22}
@@ -49,9 +53,13 @@ class CampaignEdit extends Component {
             <div class="step" data-target="#test-l-2">
               <button class="step-trigger">
                 <span class="bs-stepper-circle">2</span>
-                <span class="bs-stepper-label textpara">
+                <div className="">
+                  <p className="px">Goal</p>
+                  <p>Create and Set</p>
+                </div>
+                {/* <span class="bs-stepper-label textpara">
                   Create Goal And Set Goal
-                </span>
+                </span> */}
               </button>
               <Icon.ChevronRight
                 size={22}
@@ -63,7 +71,7 @@ class CampaignEdit extends Component {
             <div class="step" data-target="#test-l-3">
               <button class="step-trigger">
                 <span class="bs-stepper-circle">3</span>
-                <span class="bs-stepper-label textpara">Notification</span>
+                <span class="bs-stepper-label ">Notification</span>
               </button>
               <Icon.ChevronRight
                 size={22}

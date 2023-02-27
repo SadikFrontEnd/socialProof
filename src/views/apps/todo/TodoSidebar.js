@@ -1,11 +1,42 @@
 import React from "react";
-import { Button, ListGroup, ListGroupItem } from "reactstrap";
+import {
+  Button,
+  ListGroup,
+  ListGroupItem,
+  Row,
+  Col,
+  Modal,
+  Form,
+  ModalHeader,
+  ModalBody,
+  InputGroup,
+  Input,
+  ModalFooter,
+} from "reactstrap";
 import PerfectScrollbar from "react-perfect-scrollbar";
 import { X, Layers, Star, Info, Check, Trash, User } from "react-feather";
 import { connect } from "react-redux";
 import { changeFilter } from "../../../redux/actions/todo/index";
 import { history } from "../../../history";
 class TodoSidebar extends React.Component {
+  state = {
+    modal: false,
+  };
+  toggleModal = () => {
+    this.setState((prevState) => ({
+      modal: !prevState.modal,
+    }));
+  };
+
+  handleSubmit = (e) => {
+    e.preventDefault();
+    if (this.state.campaignName.length > 0) {
+      history.push("/apps/editcampaigns");
+      this.setState({ isValid: true });
+    } else if (this.state.campaignName.length === 0) {
+      this.setState({ isValid: false });
+    }
+  };
   render() {
     return (
       <React.Fragment>
@@ -36,7 +67,7 @@ class TodoSidebar extends React.Component {
               wheelPropagation: false,
             }}
           >
-            <ListGroup className="font-medium-1">
+            {/* <ListGroup className="font-medium-1">
               <ListGroupItem
                 className="border-0 pt-0"
                 action
@@ -52,9 +83,73 @@ class TodoSidebar extends React.Component {
                 <Layers size={22} />
                 <span className="align-middle ml-1">All</span>
               </ListGroupItem>
-            </ListGroup>
+            </ListGroup> */}
             <hr />
-            <h5 className="mt-2 mb-1 pt-25">Tabs</h5>
+            {/* <h5 className="mt-2 mb-1 pt-25 ">Tabs</h5> */}
+            {/* <Button>Create Campaign</Button> */}
+            {/* <Row className="my-1 mx-1"> */}
+            {/* <Col lg="4" md="4" sm="12"></Col>
+                  <Col lg="4" md="4" sm="12"></Col> */}
+            {/* <Col lg="12" md="12" sm="12"> */}
+            <div className="mt-2 mb-1 pt-25">
+              <Button
+                color="primary"
+                className="px-1"
+                onClick={this.toggleModal}
+              >
+                <Modal
+                  isOpen={this.state.modal}
+                  toggle={this.toggleModal}
+                  className="modal-dialog-centered"
+                >
+                  <Form onSubmit={this.handleSubmit}>
+                    <ModalHeader toggle={this.toggleModal}>
+                      Build & launch a new campaign
+                    </ModalHeader>
+                    <ModalBody>
+                      <InputGroup>
+                        <Input
+                          type="text"
+                          required
+                          placeholder="Campaign Name"
+                          onChange={(e) =>
+                            this.setState({
+                              campaignName: e.target.value,
+                            })
+                          }
+                          value={this.state.campaignName}
+                          id="campaignName"
+                          name="campaignName"
+                          valid={this.state.isValid === true}
+                          invalid={this.state.isValid === false}
+                          alt="text"
+                          //  placeholder="create position..."
+                        />
+                      </InputGroup>
+                    </ModalBody>
+                    <ModalFooter>
+                      <Button
+                        className="btn-sm"
+                        color="primary"
+                        onClick={this.handleSubmit}
+                      >
+                        Next
+                      </Button>
+                      <Button
+                        className="btn-secondary btn-sm"
+                        onClick={this.toggleModal}
+                      >
+                        Cancel
+                      </Button>
+                    </ModalFooter>
+                  </Form>
+                </Modal>
+                Create Campaign
+              </Button>
+            </div>
+            {/* </Col> */}
+            {/* </Row> */}
+
             <ListGroup className="font-medium-1">
               <ListGroupItem
                 className="border-0"
@@ -67,7 +162,7 @@ class TodoSidebar extends React.Component {
                     : false
                 }
               >
-                <Star size={22} />
+                {/* <Star size={22} /> */}
                 <span className="align-middle ml-1">Campaigns</span>
               </ListGroupItem>
               <ListGroupItem
@@ -81,7 +176,7 @@ class TodoSidebar extends React.Component {
                     : false
                 }
               >
-                <Check size={22} />
+                {/* <Check size={22} /> */}
                 <span className="align-middle ml-1">Statistics</span>
               </ListGroupItem>
               <ListGroupItem
@@ -95,7 +190,7 @@ class TodoSidebar extends React.Component {
                     : false
                 }
               >
-                <User size={22} />
+                {/* <User size={22} /> */}
                 <span className="align-middle ml-1">Help Center</span>
               </ListGroupItem>
             </ListGroup>

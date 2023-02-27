@@ -247,68 +247,6 @@ class TodoList extends React.Component {
                   wheelPropagation: false,
                 }}
               >
-                <Row className="my-1 mx-1">
-                  <Col lg="4" md="4" sm="12"></Col>
-                  <Col lg="4" md="4" sm="12"></Col>
-                  <Col lg="4" md="4" sm="12">
-                    <div className="text-right">
-                      <Button
-                        color="primary"
-                        className="px-1"
-                        onClick={this.toggleModal}
-                      >
-                        <Modal
-                          isOpen={this.state.modal}
-                          toggle={this.toggleModal}
-                          className="modal-dialog-centered"
-                        >
-                          <Form onSubmit={this.handleSubmit}>
-                            <ModalHeader toggle={this.toggleModal}>
-                              Build & launch a new campaign
-                            </ModalHeader>
-                            <ModalBody>
-                              <InputGroup>
-                                <Input
-                                  type="text"
-                                  required
-                                  placeholder="Campaign Name"
-                                  onChange={(e) =>
-                                    this.setState({
-                                      campaignName: e.target.value,
-                                    })
-                                  }
-                                  value={this.state.campaignName}
-                                  id="campaignName"
-                                  name="campaignName"
-                                  valid={this.state.isValid === true}
-                                  invalid={this.state.isValid === false}
-                                  alt="text"
-                                  //  placeholder="create position..."
-                                />
-                              </InputGroup>
-                            </ModalBody>
-                            <ModalFooter>
-                              <Button
-                                className="btn-sm"
-                                color="primary"
-                                onClick={this.handleSubmit}
-                              >
-                                Next
-                              </Button>
-                              <Button
-                                className="btn-secondary btn-sm"
-                                onClick={this.toggleModal}
-                              >
-                                Cancel
-                              </Button>
-                            </ModalFooter>
-                          </Form>
-                        </Modal>
-                        Create Campaign
-                      </Button>
-                    </div>
-                  </Col>
-                </Row>
                 {/* <Row className="todo-task-list-wrapper mt-2">{renderTodos}</Row> */}
                 {/* <ul className="todo-task-list-wrapper">{renderTodos}</ul> */}
                 <div className="react-dataTable">

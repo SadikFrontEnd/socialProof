@@ -1,7 +1,5 @@
 // new css
 div.heading{
-  // background: #4270fc;
-    // background: linear-gradient(90deg,#4270fc,#1e43ff);
     background-color: #7367f0!important;
     padding: 3.125rem !important;
 }
@@ -12,7 +10,7 @@ div.heading{
     line-height: 1em;
     margin: 0 0 15px;
     letter-spacing: -.02em;
-  text-align: start;
+    text-align: start;
     
 }
 .heading1{
@@ -42,14 +40,13 @@ div.heading{
   .selectData{
     width:150px;
   }
-.cardChange.card{
- border-radius: 1.25rem !important;
-  }
+// .cardChange.card{
+//  border-radius: 1.25rem !important;
+//   }
   .cardChange.card:hover{
     transition: all .15s ease-in-out !important;
     transform: translateY(-4px) !important;
-    // border-color: aqua !important;
-    // box-shadow: 10px 10px 40px 0 rgb(36 35 40 / 20%), 0 0 0 1px #4270fc !important;
+  
  }
  .addCode p{
   padding: 10px 0;
@@ -61,16 +58,10 @@ div.heading{
    color: #242328;
    font-weight: 500;
    position: relative;
+   font-size: 25px;
   }
-  // .card1{
-  //   position: absolute;
-  //   left: 0;
-  //   top: 240px;
-  //   right: 0;
-  //   z-index: 999;
-  // }
   .card2{
-  padding: 0 23px ;
+  padding: 0 23px;
   }
   .msgDiv{
     padding: 20px;
@@ -87,9 +78,8 @@ div.heading{
   // rs css
 
   [dir=ltr] div.heading {
-    // background: linear-gradient(90deg, #4270fc, #1e43ff);
     background-color: #7367f0!important;
-    padding: 70px 35px 90px!important;
+    padding: 30px 35px 60px!important;
     display: inline-block;
     width: 100%;
 }
@@ -106,7 +96,6 @@ div.heading{
 // notification card
 .notifiCard{
 border-bottom: 1px solid #eceff0 !important;
-    background-color: #eff8ff !important;
     padding: 1.2rem !important;
 }
 .inputTime{
@@ -141,4 +130,8 @@ border-bottom: 1px solid #eceff0 !important;
 }
 .css-1hwfws3{
   width: 50px;
+}
+.btnStyle{
+  margin:3px 0;
+  text-align: right;
 }

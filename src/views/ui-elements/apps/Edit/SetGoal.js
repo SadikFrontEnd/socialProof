@@ -20,6 +20,8 @@ import { ChevronDown } from "react-feather";
 import axios from "axios";
 import InputMask from "react-input-mask";
 import Select from "react-select";
+// import "../../../assets/scss/pages/edit-campaign.scss";
+import "../../../../assets/scss/pages/set-goal.scss";
 import DataTable from "react-data-table-component";
 const category = [
   { value: "Lead", label: "Lead" },
@@ -32,12 +34,12 @@ const category = [
 ];
 const columns = [
   {
-    name: "Primary Goals",
+    name: "PRIMARY GOALS",
     selector: "id",
     sortable: true,
   },
   {
-    name: "Additional Goals Tracked",
+    name: "ADDITIONAL GOALS TRACKED",
     selector: "first_name",
     sortable: true,
   },
@@ -118,100 +120,104 @@ class SetGoal extends React.Component {
       <>
         <Card>
           <CardHeader>
-            <div>
+            <div className="text-right w-100">
               <Button color="primary" onClick={this.toggleModal}>
+                <Modal
+                  isOpen={this.state.modal}
+                  toggle={this.toggleModal}
+                  centered
+                >
+                  <ModalHeader toggle={this.toggleModals}>
+                    Create your goal
+                  </ModalHeader>
+                  <ModalBody>
+                    <Form onSubmit={this.handleSubmit}>
+                      <Row>
+                        <Col lg="12" md="12" sm="12">
+                          <FormGroup>
+                            <Label for="Category">Goal Category*</Label>
+                            <Select
+                              value={this.state.selectValue}
+                              onChange={this.handleChange}
+                              className="React customselect"
+                              // classNamePrefix="select"
+                              // defaultValue={category[0]}
+                              name="category"
+                              options={category}
+                            />
+                          </FormGroup>
+                        </Col>
+                        <Col lg="12" md="12" sm="12" className="mb-2">
+                          <FormGroup>
+                            <Label for="goalName">Name your Goal*</Label>
+                            <Input
+                              type="text"
+                              required
+                              placeholder="Ex:signed up for basic plan"
+                              onChange={(e) =>
+                                this.setState({
+                                  goalName: e.target.value,
+                                })
+                              }
+                              value={this.state.goalName}
+                              id="goalName"
+                              name="goalName"
+                            />
+                          </FormGroup>
+                        </Col>
+                        <Col lg="12" md="12" sm="12" className="mb-2">
+                          <Label for="firstName">Set conversion value</Label>
+                          <InputMask
+                            onChange={(e) =>
+                              this.setState({
+                                value: e.target.value,
+                              })
+                            }
+                            className="form-control"
+                            mask="$9999"
+                            placeholder="100"
+                          />
+                        </Col>
+
+                        <Col md="12" sm="12" className="mb-2">
+                          <FormGroup>
+                            <Label for="url">Set goal completion URL*</Label>
+                            <Input
+                              type="text"
+                              required
+                              placeholder="URL"
+                              onChange={(e) =>
+                                this.setState({
+                                  url: e.target.value,
+                                })
+                              }
+                              value={this.state.url}
+                              id="url"
+                              name="url"
+                            />
+                          </FormGroup>
+                        </Col>
+                        <Col>
+                          <div className="add-task">
+                            <Button.Ripple
+                              block
+                              className="btn-block my-1"
+                              color="primary"
+                              // onClick={() => {
+                              //   this.props.addTask("open");
+                              //   this.props.mainSidebar(false);
+                              // }}
+                            >
+                              Create Goal
+                            </Button.Ripple>
+                          </div>
+                        </Col>
+                      </Row>
+                    </Form>
+                  </ModalBody>
+                </Modal>
                 Create Goal
               </Button>
-              <Modal isOpen={this.state.modal} toggle={this.toggleModal}>
-                <ModalHeader toggle={this.toggleModals}>
-                  Create your goal
-                </ModalHeader>
-                <ModalBody>
-                  <Form onSubmit={this.handleSubmit}>
-                    <Row>
-                      <Col lg="12" md="12" sm="12">
-                        <FormGroup>
-                          <Label for="Category">Goal Category*</Label>
-                          <Select
-                            value={this.state.selectValue}
-                            onChange={this.handleChange}
-                            className="React customselect"
-                            // classNamePrefix="select"
-                            // defaultValue={category[0]}
-                            name="category"
-                            options={category}
-                          />
-                        </FormGroup>
-                      </Col>
-                      <Col lg="12" md="12" sm="12" className="mb-2">
-                        <FormGroup>
-                          <Label for="goalName">Name your Goal*</Label>
-                          <Input
-                            type="text"
-                            required
-                            placeholder="Ex:signed up for basic plan"
-                            onChange={(e) =>
-                              this.setState({
-                                goalName: e.target.value,
-                              })
-                            }
-                            value={this.state.goalName}
-                            id="goalName"
-                            name="goalName"
-                          />
-                        </FormGroup>
-                      </Col>
-                      <Col lg="12" md="12" sm="12" className="mb-2">
-                        <Label for="firstName">Set conversion value</Label>
-                        <InputMask
-                          onChange={(e) =>
-                            this.setState({
-                              value: e.target.value,
-                            })
-                          }
-                          className="form-control"
-                          mask="$9999"
-                          placeholder="100"
-                        />
-                      </Col>
-
-                      <Col md="12" sm="12" className="mb-2">
-                        <FormGroup>
-                          <Label for="url">Set goal completion URL*</Label>
-                          <Input
-                            type="text"
-                            required
-                            placeholder="URL"
-                            onChange={(e) =>
-                              this.setState({
-                                url: e.target.value,
-                              })
-                            }
-                            value={this.state.url}
-                            id="url"
-                            name="url"
-                          />
-                        </FormGroup>
-                      </Col>
-                      <Col>
-                        <div className="add-task">
-                          <Button.Ripple
-                            block
-                            className="btn-block my-1"
-                            color="primary"
-                            // onClick={() => {
-                            //   this.props.addTask("open");
-                            //   this.props.mainSidebar(false);
-                            // }}
-                          >
-                            Create Goal
-                          </Button.Ripple>
-                        </div>
-                      </Col>
-                    </Row>
-                  </Form>
-                </ModalBody>
-              </Modal>
             </div>
           </CardHeader>
           <CardBody>

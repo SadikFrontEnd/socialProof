@@ -121,11 +121,30 @@ padding:9px 12px !important;
    
 }
 
-.textpara{
-    color: #b9b9c3;
-    font-weight: 400;
-    font-family: "Montserrat",Helvetica,Arial,serif;
-}
+
 [dir] .bs-stepper .step-trigger:hover {
     background-color: transparent;
+}
+
+// stepper
+p.px {
+    margin: 0;
+    text-align: start;
+    font-weight: 600;
+}
+// .textpara{
+//     color: #b9b9c3;
+//     font-weight: 400;
+//     font-family: "Montserrat",Helvetica,Arial,serif;
+// }
+
+.bs-stepper .step-trigger{
+    color: #b9b9c3;
+    font-weight: 400;
+    font-family: "Montserrat",Helvetica,Arial,serif; 
+}
+.bs-stepper .step-trigger:focus {
+  // color: #007bff;
+  color: #7367f0 !important;
+    outline: 0;
 }

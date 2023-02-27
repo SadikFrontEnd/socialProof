@@ -35,11 +35,6 @@ class CreateGoal extends React.Component {
   };
   handleSubmit = (e) => {
     e.preventDefault();
-    // if (this.state.campaignName.length > 0) {
-    //   this.setState({ isValid: true });
-    // } else if (this.state.campaignName.length === 0) {
-    //   this.setState({ isValid: false });
-    // }
   };
   toggleModal = () => {
     this.setState((prevState) => ({
