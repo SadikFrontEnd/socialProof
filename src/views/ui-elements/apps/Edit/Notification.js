@@ -2,13 +2,8 @@ import React from "react";
 import {
   Row,
   Col,
-  Button,
   Card,
   CardBody,
-  UncontrolledButtonDropdown,
-  DropdownMenu,
-  DropdownItem,
-  DropdownToggle,
   CardHeader,
   CardTitle,
   Input,
@@ -17,10 +12,10 @@ import {
 import Select from "react-select";
 import "../../../../assets/scss/pages/campaign.scss";
 import count from "../../../../assets/img/svg/CountPulse.svg";
-import card from "../../../../assets/img/svg/card.svg";
 import fire from "../../../../assets/img/svg/fire.svg";
 import groupImg from "../../../../assets/img/svg/bulkpng.png";
-
+import "react-toggle/style.css";
+import "../../../../assets/scss/plugins/forms/switch/react-toggle.scss";
 const category = [
   { value: "Rounded", label: "Rounded" },
   { value: "Boxy", label: "Boxy" },
@@ -79,7 +74,7 @@ class Notification extends React.Component {
           <Col lg="6" md="6" sm="12">
             <Card className="cardChange hi-1">
               <CardHeader className="notifiCard">
-                <CardTitle className="r">Appearance</CardTitle>
+                <CardTitle className="cardttl">Appearance</CardTitle>
               </CardHeader>
               <CardBody className="">
                 <div className="innerAppearance">
@@ -128,7 +123,7 @@ class Notification extends React.Component {
                     ></CustomInput>
                   </div>
                 </div>
-                <div className="innerAppearance">
+                {/* <div className="innerAppearance">
                   <div>Notification Theme</div>
                   <div className="d-flex">
                     <Select
@@ -137,6 +132,24 @@ class Notification extends React.Component {
                       options={category}
                     />
                   </div>
+                </div> */}
+                <div className="mt-1 form-select innerAppearance">
+                  <div>Notification Theme</div>
+                  {/* <label>Status</label> */}
+                  <div className="">
+                    <Input
+                      // onChange={handleStaus}
+                      // defaultValue={statusValue}
+                      type="select"
+                      name="status"
+                      className="form select"
+                      id="status"
+                    >
+                      {/* <option>All Location</option> */}
+                      <option value={"Rounded"}>Rounded</option>
+                      <option value={"Boxy"}>Boxy</option>
+                    </Input>
+                  </div>
                 </div>
               </CardBody>
             </Card>
@@ -144,10 +157,10 @@ class Notification extends React.Component {
           <Col lg="6" md="6" sm="12">
             <Card className="cardChange hi-1">
               <CardHeader className="notifiCard">
-                <CardTitle> Timing?</CardTitle>
+                <CardTitle className="cardttl"> Timing</CardTitle>
               </CardHeader>
               <CardBody className="">
-                <div className="d-flex my-1 ">
+                <div className="d-flex my-3 align-items-baseline">
                   <div className="mr-1"> Delay the first notification for</div>
                   <div>
                     <span className="">
@@ -160,7 +173,7 @@ class Notification extends React.Component {
                   </div>
                   <span className="ml-1"> seconds</span>
                 </div>
-                <div className="d-flex my-1 ">
+                <div className="d-flex my-3 align-items-baseline">
                   <div className="mr-1">Display each notification for</div>
                   <div>
                     <span className="">
@@ -173,7 +186,7 @@ class Notification extends React.Component {
                   </div>
                   <span className="ml-1"> seconds</span>
                 </div>
-                <div className="d-flex my-1">
+                <div className="d-flex my-3 align-items-baseline">
                   <div className="mr-1">Position notifications on</div>
                   <div>
                     <span className="">

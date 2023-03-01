@@ -9,6 +9,7 @@ import Stepper from "bs-stepper";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bs-stepper/dist/css/bs-stepper.min.css";
 import "../../../assets/scss/pages/edit-campaign.scss";
+import DisplaySite from "./DisplaySite";
 
 class CampaignEdit extends Component {
   constructor() {
@@ -37,11 +38,10 @@ class CampaignEdit extends Component {
             <div class="step" data-target="#test-l-1">
               <button class="step-trigger">
                 <span class="bs-stepper-circle">1</span>
-                <div className="">
+                <div className="stepperSetup">
                   <p className="px">Pixel</p>
-                  <p>Confirm and Install</p>
+                  <p className="px1">Confirm and Install</p>
                 </div>
-                {/* <span class="bs-stepper-label textpara">Confirm Pixel</span> */}
               </button>
               <Icon.ChevronRight
                 size={22}
@@ -53,13 +53,10 @@ class CampaignEdit extends Component {
             <div class="step" data-target="#test-l-2">
               <button class="step-trigger">
                 <span class="bs-stepper-circle">2</span>
-                <div className="">
+                <div className="stepperSetup">
                   <p className="px">Goal</p>
-                  <p>Create and Set</p>
+                  <p className="px1">Create and Set</p>
                 </div>
-                {/* <span class="bs-stepper-label textpara">
-                  Create Goal And Set Goal
-                </span> */}
               </button>
               <Icon.ChevronRight
                 size={22}
@@ -102,6 +99,9 @@ class CampaignEdit extends Component {
             </div>
           </div>
           <div class="bs-stepper-content">
+            {/* <div id="test-l-1" class="content">
+              <SwitchData />
+            </div> */}
             <div id="test-l-1" class="content">
               <Pixel />
             </div>
@@ -112,7 +112,7 @@ class CampaignEdit extends Component {
               <Notification />
             </div>
             <div id="test-l-4" class="content ">
-              <PositionTable />
+              <DisplaySite />
             </div>
             <div id="test-l-5" class="content">
               <PositionTable />

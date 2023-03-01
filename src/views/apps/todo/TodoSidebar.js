@@ -40,7 +40,7 @@ class TodoSidebar extends React.Component {
   render() {
     return (
       <React.Fragment>
-        {console.log("getting props", this.props.routerProps.location)}
+        {/* {console.log("getting props", this.props.routerProps.location)} */}
         <span
           className="sidebar-close-icon"
           onClick={() => this.props.mainSidebar(false)}
@@ -48,108 +48,68 @@ class TodoSidebar extends React.Component {
           <X size={15} />
         </span>
         <div className="todo-app-menu">
-          {/* <div className="add-task">
+          <div className="add-task">
             <Button.Ripple
               block
-              className="btn-block my-1"
               color="primary"
-              onClick={() => {
-                this.props.addTask("open");
-                this.props.mainSidebar(false);
-              }}
+              className="btn-block my-1"
+              onClick={this.toggleModal}
             >
-              Add Task
+              <Modal
+                isOpen={this.state.modal}
+                toggle={this.toggleModal}
+                className="modal-dialog-centered"
+              >
+                <Form onSubmit={this.handleSubmit}>
+                  <ModalHeader toggle={this.toggleModal}>
+                    Build & launch a new campaign
+                  </ModalHeader>
+                  <ModalBody>
+                    <InputGroup>
+                      <Input
+                        type="text"
+                        required
+                        placeholder="Campaign Name"
+                        onChange={(e) =>
+                          this.setState({
+                            campaignName: e.target.value,
+                          })
+                        }
+                        value={this.state.campaignName}
+                        id="campaignName"
+                        name="campaignName"
+                        valid={this.state.isValid === true}
+                        invalid={this.state.isValid === false}
+                        alt="text"
+                      />
+                    </InputGroup>
+                  </ModalBody>
+                  <ModalFooter>
+                    <Button
+                      className="btn-sm"
+                      color="primary"
+                      onClick={this.handleSubmit}
+                    >
+                      Next
+                    </Button>
+                    <Button
+                      className="btn-secondary btn-sm"
+                      onClick={this.toggleModal}
+                    >
+                      Cancel
+                    </Button>
+                  </ModalFooter>
+                </Form>
+              </Modal>
+              Create Campaign
             </Button.Ripple>
-          </div> */}
+          </div>
           <PerfectScrollbar
             className="sidebar-menu-list"
             options={{
               wheelPropagation: false,
             }}
           >
-            {/* <ListGroup className="font-medium-1">
-              <ListGroupItem
-                className="border-0 pt-0"
-                action
-                onClick={() => {
-                  this.props.changeFilter("all");
-                }}
-                active={
-                  this.props.routerProps.location.pathname === "/todo/all"
-                    ? true
-                    : false
-                }
-              >
-                <Layers size={22} />
-                <span className="align-middle ml-1">All</span>
-              </ListGroupItem>
-            </ListGroup> */}
-            <hr />
-            {/* <h5 className="mt-2 mb-1 pt-25 ">Tabs</h5> */}
-            {/* <Button>Create Campaign</Button> */}
-            {/* <Row className="my-1 mx-1"> */}
-            {/* <Col lg="4" md="4" sm="12"></Col>
-                  <Col lg="4" md="4" sm="12"></Col> */}
-            {/* <Col lg="12" md="12" sm="12"> */}
-            <div className="mt-2 mb-1 pt-25">
-              <Button
-                color="primary"
-                className="px-1"
-                onClick={this.toggleModal}
-              >
-                <Modal
-                  isOpen={this.state.modal}
-                  toggle={this.toggleModal}
-                  className="modal-dialog-centered"
-                >
-                  <Form onSubmit={this.handleSubmit}>
-                    <ModalHeader toggle={this.toggleModal}>
-                      Build & launch a new campaign
-                    </ModalHeader>
-                    <ModalBody>
-                      <InputGroup>
-                        <Input
-                          type="text"
-                          required
-                          placeholder="Campaign Name"
-                          onChange={(e) =>
-                            this.setState({
-                              campaignName: e.target.value,
-                            })
-                          }
-                          value={this.state.campaignName}
-                          id="campaignName"
-                          name="campaignName"
-                          valid={this.state.isValid === true}
-                          invalid={this.state.isValid === false}
-                          alt="text"
-                          //  placeholder="create position..."
-                        />
-                      </InputGroup>
-                    </ModalBody>
-                    <ModalFooter>
-                      <Button
-                        className="btn-sm"
-                        color="primary"
-                        onClick={this.handleSubmit}
-                      >
-                        Next
-                      </Button>
-                      <Button
-                        className="btn-secondary btn-sm"
-                        onClick={this.toggleModal}
-                      >
-                        Cancel
-                      </Button>
-                    </ModalFooter>
-                  </Form>
-                </Modal>
-                Create Campaign
-              </Button>
-            </div>
-            {/* </Col> */}
-            {/* </Row> */}
-
             <ListGroup className="font-medium-1">
               <ListGroupItem
                 className="border-0"

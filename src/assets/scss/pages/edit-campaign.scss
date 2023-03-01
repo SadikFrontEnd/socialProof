@@ -27,20 +27,17 @@
     border-radius: 20px
 }
 .para{
-    // margin:0 auto 80px;
+   
     text-align: center;
     margin: 20px auto !important;
-    //     width: 450px;
-    // max-width: 100%;
-    // margin: 0 auto 80px;
-    //  text-align: center
+    
 }
 
 .primarygoals ul{
-// display: flex;
+
 list-style: none;
 padding: 5px;
-// width: 50px;
+
 }
 [dir] .primarygoals ul li {
     margin: 10px 0;
@@ -104,22 +101,27 @@ padding:9px 12px !important;
 .step-trigger{
     padding: 8px !important;
 }
-
+.stepperSetup{
+    // margin: 14px;
+    margin: 16px 7px 0
+}
 [dir] .bs-stepper-content {
     padding: 0 20px 20px;
     margin-top: 50px;
 }
 [dir] .bs-stepper-circle {
-    padding: 0.5em 0;
     margin: 0.25rem;
     background-color:#b9b9c3;
     border-radius: 2px;
-  }
+    padding: 19px;
+    justify-content: center;
+    align-items: center;
+    // padding: 0.5em 0;
+}
   
   [dir] .active .bs-stepper-circle   {
     background-color: #7367f0  !important;
-   
-}
+    }
 
 
 [dir] .bs-stepper .step-trigger:hover {
@@ -131,7 +133,12 @@ p.px {
     margin: 0;
     text-align: start;
     font-weight: 600;
-}
+    }
+    p.px1{
+        font-weight: 400;
+    font-size: .85rem;
+    color: #b9b9c3;
+    }
 // .textpara{
 //     color: #b9b9c3;
 //     font-weight: 400;

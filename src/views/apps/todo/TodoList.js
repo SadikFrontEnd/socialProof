@@ -2,8 +2,6 @@ import React from "react";
 import {
   FormGroup,
   Input,
-  Row,
-  Col,
   Button,
   Modal,
   ModalHeader,
@@ -14,11 +12,12 @@ import {
 } from "reactstrap";
 import DataTable from "react-data-table-component";
 import "../../../assets/scss/pages/app-email.scss";
+import "../../../assets/scss/pages/campaignTable.scss";
 import { Menu, Search, ChevronDown } from "react-feather";
 import PerfectScrollbar from "react-perfect-scrollbar";
 import { connect } from "react-redux";
 import { history } from "../../../history";
-import { positionData, data1 } from "./TableData";
+import { positionData, data } from "./TableData";
 import {
   getTodos,
   completeTask,
@@ -107,108 +106,6 @@ class TodoList extends React.Component {
                 <Button color="primary">Create</Button>
               </ModalFooter>
             </Modal>
-            // <li
-            //   className={`todo-item ${todo.isCompleted ? "completed" : ""}`}
-            //   key={i}
-            //   onClick={() => {
-            //     handleUpdateTask(todo);
-            //   }}
-            // >
-            //   <div className="todo-title-wrapper d-flex justify-content-between mb-50">
-            //     <div className="todo-title-area d-flex align-items-center">
-            //       <div className="title-wrapper d-flex">
-            //         <Checkbox
-            //           color="primary"
-            //           className="user-checkbox"
-            //           icon={<Check className="vx-icon" size={12} />}
-            //           label={""}
-            //           checked={todo.isCompleted}
-            //           size="sm"
-            //           onClick={(e) => {
-            //             e.stopPropagation();
-            //             this.props.completeTask(todo);
-            //           }}
-            //           onChange={(e) => e.stopPropagation()}
-            //         />
-            //         <h6 className="todo-title mt-50 mx-50">{todo.title}</h6>
-            //       </div>
-            //       {todo.tags.length > 0 ? (
-            //         <div className="chip-wrapper">
-            //           {todo.tags.map((tag, i) => (
-            //             <div className="chip mb-0" key={i}>
-            //               <div className="chip-body">
-            //                 <span className="chip-text">
-            //                   <span
-            //                     className={`bullet bullet-${
-            //                       tag === "backend"
-            //                         ? "warning"
-            //                         : tag === "doc"
-            //                         ? "success"
-            //                         : tag === "bug"
-            //                         ? "danger"
-            //                         : "primary"
-            //                     } bullet-xs`}
-            //                   />
-            //                   <span className="text-capitalize ml-25">
-            //                     {tag}
-            //                   </span>
-            //                 </span>
-            //               </div>
-            //             </div>
-            //           ))}
-            //         </div>
-            //       ) : null}
-            //     </div>
-            //     <div
-            //       className={`todo-item-action d-flex ${
-            //         routerFilter === "trashed" ? "justify-content-end" : ""
-            //       }`}
-            //     >
-            //       <div
-            //         className={`todo-item-info d-inline-block ${
-            //           routerFilter === "trashed" ? "mr-1" : "mr-1 mr-sm-0"
-            //         }`}
-            //         onClick={(e) => {
-            //           e.stopPropagation();
-            //           this.props.importantTask(todo);
-            //         }}
-            //       >
-            //         <Info
-            //           size={17}
-            //           className={`${todo.isImportant ? "text-success" : ""}`}
-            //         />
-            //       </div>
-            //       <div
-            //         className="todo-item-favorite d-inline-block mr-1 mr-sm-0"
-            //         onClick={(e) => {
-            //           e.stopPropagation();
-            //           this.props.starTask(todo);
-            //         }}
-            //       >
-            //         <Star
-            //           size={17}
-            //           className={`${todo.isStarred ? "text-warning" : ""}`}
-            //         />
-            //       </div>
-            //       {routerFilter !== "trashed" ? (
-            //         <div
-            //           className="todo-item-delete d-inline-block mr-1 mr-sm-0"
-            //           onClick={(e) => {
-            //             e.stopPropagation();
-            //             this.props.trashTask(todo.id);
-            //           }}
-            //         >
-            //           <Trash size={17} />
-            //         </div>
-            //       ) : null}
-            //     </div>
-            //   </div>
-            //   {todo.desc.length > 0 ? (
-            //     <p className="todo-desc truncate mb-0">{todo.desc}</p>
-            //   ) : (
-            //     ""
-            //   )}
-            // </li>
           );
         })
       ) : (
@@ -258,7 +155,7 @@ class TodoList extends React.Component {
                     columns={positionData}
                     paginationPerPage={7}
                     sortIcon={<ChevronDown size={10} />}
-                    data={data1}
+                    data={data}
                   />
                 </div>
               </PerfectScrollbar>

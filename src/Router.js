@@ -39,12 +39,10 @@ const syntaxhighlighter = lazy(() =>
 const reactfeather = lazy(() =>
   import("./views/ui-elements/icons/FeatherIcons")
 );
-const campaigns = lazy(() => import("./views/ui-elements/apps/Campaigns"));
 const CampaignEdit = lazy(() =>
   import("./views/ui-elements/apps/CampaignEdit")
 );
 const SocialProof = lazy(() => import("./views/ui-elements/apps/SocialProof"));
-const goals = lazy(() => import("./views/ui-elements/apps/Goals"));
 const Pixel = lazy(() => import("./views/ui-elements/apps/Pixel"));
 const Statistics = lazy(() => import("./views/ui-elements/apps/Statistics"));
 const basicCards = lazy(() => import("./views/ui-elements/cards/basic/Cards"));
@@ -60,10 +58,6 @@ const actionCards = lazy(() =>
 const Breadcrumbs = lazy(() =>
   import("./components/reactstrap/breadcrumbs/Breadcrumbs")
 );
-
-// const NavComponent = lazy(() =>
-//   import("./components/reactstrap/navComponent/NavComponent")
-// );
 const Tabs = lazy(() => import("./components/reactstrap/tabs/Tabs"));
 const TabPills = lazy(() =>
   import("./components/reactstrap/tabPills/TabPills")
@@ -257,17 +251,14 @@ class AppRouter extends React.Component {
           />
           <AppRoute path="/icons/reactfeather" component={reactfeather} />
           <AppRoute path="/cards/basic" component={basicCards} />
-          <AppRoute path="/apps/campaigns" component={campaigns} />
           <AppRoute path="/apps/editcampaigns" component={CampaignEdit} />
           <AppRoute path="/apps/socialproof" component={SocialProof} />
-          <AppRoute path="/apps/goals" component={goals} />
           <AppRoute path="/apps/pixel" component={Pixel} />
           <AppRoute path="/apps/statistics" component={Statistics} />
           <AppRoute path="/cards/statistics" component={statisticsCards} />
           <AppRoute path="/cards/analytics" component={analyticsCards} />
           <AppRoute path="/cards/action" component={actionCards} />
           <AppRoute path="/components/breadcrumbs" component={Breadcrumbs} />
-          {/* <AppRoute path="/components/nav-component" component={NavComponent} /> */}
           <AppRoute path="/components/tabs-component" component={Tabs} />
           <AppRoute path="/components/pills-component" component={TabPills} />
           <AppRoute path="/components/tooltips" component={Tooltips} />

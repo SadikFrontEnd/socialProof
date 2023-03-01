@@ -75,12 +75,12 @@ div.heading{
 
   [dir=ltr] div.heading {
     background-color: #7367f0!important;
-    padding: 10px 35px 50px!important;
+    padding: 4px 35px 20px!important;
     display: inline-block;
     width: 100%;
 }
 .bottom-box {
-  margin-top: -45px;
+  margin-top: -15px;
   padding: 0 10px;
 }
 
@@ -99,7 +99,9 @@ border-bottom: 1px solid #eceff0 !important;
   width: 2rem !important;
   text-align: center !important;
 }
-
+.cardttl.card-title {
+  font-weight: 100;
+}
 
 // TodoList
 [dir] .btn-secondary {
