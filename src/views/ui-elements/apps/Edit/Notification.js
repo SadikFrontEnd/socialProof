@@ -8,6 +8,8 @@ import {
   CardTitle,
   Input,
   CustomInput,
+  FormGroup,
+  Label,
 } from "reactstrap";
 import Select from "react-select";
 import "../../../../assets/scss/pages/campaign.scss";
@@ -135,7 +137,6 @@ class Notification extends React.Component {
                 </div> */}
                 <div className="mt-1 form-select innerAppearance">
                   <div>Notification Theme</div>
-                  {/* <label>Status</label> */}
                   <div className="">
                     <Input
                       // onChange={handleStaus}
@@ -160,7 +161,7 @@ class Notification extends React.Component {
                 <CardTitle className="cardttl"> Timing</CardTitle>
               </CardHeader>
               <CardBody className="">
-                <div className="d-flex my-3 align-items-baseline">
+                <div className="d-flex my-2 align-items-baseline">
                   <div className="mr-1"> Delay the first notification for</div>
                   <div>
                     <span className="">

@@ -135,56 +135,9 @@ class DisplaySite extends React.Component {
                   <ModalBody>
                     <Form onSubmit={this.handleSubmit}>
                       <Row>
-                        {/* <Col lg="12" md="12" sm="12">
-                          <FormGroup>
-                            <Label for="Category">Goal Category*</Label>
-                            <Select
-                              value={this.state.selectValue}
-                              onChange={this.handleChange}
-                              className="React customselect"
-                              // classNamePrefix="select"
-                              // defaultValue={category[0]}
-                              name="category"
-                              options={category}
-                            />
-                          </FormGroup>
-                        </Col> */}
-
-                        {/* <Col lg="12" md="12" sm="12" className="mb-2">
-                          <FormGroup>
-                            <Label for="goalName">Name your Goal*</Label>
-                            <Input
-                              type="text"
-                              required
-                              placeholder="Ex:signed up for basic plan"
-                              onChange={(e) =>
-                                this.setState({
-                                  goalName: e.target.value,
-                                })
-                              }
-                              value={this.state.goalName}
-                              id="goalName"
-                              name="goalName"
-                            />
-                          </FormGroup>
-                        </Col> */}
-                        {/* <Col lg="12" md="12" sm="12" className="mb-2">
-                          <Label for="firstName">Set conversion value</Label>
-                          <InputMask
-                            onChange={(e) =>
-                              this.setState({
-                                value: e.target.value,
-                              })
-                            }
-                            className="form-control"
-                            mask="$9999"
-                            placeholder="100"
-                          />
-                        </Col> */}
-
                         <Col md="12" sm="12" className="mb-2">
                           <FormGroup>
-                            <Label for="url">Set URL*</Label>
+                            <Label for="url">Add Display Url*</Label>
                             <Input
                               type="text"
                               required
@@ -211,7 +164,7 @@ class DisplaySite extends React.Component {
                               //   this.props.mainSidebar(false);
                               // }}
                             >
-                              Create Url
+                              Add Display Url
                             </Button.Ripple>
                           </div>
                         </Col>
@@ -219,7 +172,7 @@ class DisplaySite extends React.Component {
                     </Form>
                   </ModalBody>
                 </Modal>
-                Create Url
+                Add Display Url
               </Button>
             </div>
           </CardHeader>
